@@ -1,0 +1,51 @@
+dashboard.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCF — Dashboard</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <h1>CCF Database</h1>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="members.html">Members</a>
+      <a href="attendance.html">Attendance</a>
+      <button class="btn red" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="stats-row">
+      <div class="stat-card"><div class="num" id="stat-members">0</div><div class="label">Total Members</div></div>
+      <div class="stat-card"><div class="num" id="stat-units">0</div><div class="label">Units</div></div>
+      <div class="stat-card"><div class="num" id="stat-attendance">0</div><div class="label">Attendance Records</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Welcome, <span id="user-name"></span> <span class="badge" id="user-badge"></span></h2>
+      <p id="user-unit" style="color:#888; margin-top:0.4rem;"></p>
+    </div>
+
+    <!-- Admin only -->
+    <div class="card hidden" id="admin-card">
+      <h2>All Units</h2>
+      <table>
+        <thead><tr><th>Unit</th><th>Leader</th><th>Members</th></tr></thead>
+        <tbody id="units-table"></tbody>
+      </table>
+    </div>
+
+    <!-- Leader: their unit summary -->
+    <div class="card hidden" id="leader-card">
+      <h2>Your Unit — <span id="leader-unit-name"></span></h2>
+      <p style="color:#888;">Members in your unit: <strong id="leader-member-count">0</strong></p>
+    </div>
+  </div>
+
+  <script src="dashboard.js"></script>
+</body>
+</html>

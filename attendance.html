@@ -1,0 +1,45 @@
+attendance.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCF — Attendance</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <h1>CCF Database</h1>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="members.html">Members</a>
+      <a href="attendance.html">Attendance</a>
+      <button class="btn red" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>Take Attendance</h2>
+      <div class="form-row">
+        <input type="date" id="a-date"/>
+        <input type="text" id="a-unit" placeholder="Unit"/>
+      </div>
+      <div id="checklist" style="margin: 1rem 0;"></div>
+      <button class="btn small green" id="loadBtn">Load Members</button>
+      <button class="btn small hidden" id="saveBtn">Save Attendance</button>
+      <p class="error" id="a-error"></p>
+    </div>
+
+    <div class="card">
+      <h2>Attendance Records</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Unit</th><th>Member</th><th>Status</th></tr></thead>
+        <tbody id="attendance-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="attendance.js"></script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+members.html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CCF — Members</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <nav>
+    <h1>CCF Database</h1>
+    <div class="nav-links">
+      <a href="dashboard.html">Dashboard</a>
+      <a href="members.html">Members</a>
+      <a href="attendance.html">Attendance</a>
+      <button class="btn red" id="logoutBtn">Logout</button>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="card">
+      <h2>Add Member</h2>
+      <div class="form-row">
+        <input type="text"  id="m-name"  placeholder="Full name"/>
+        <input type="email" id="m-email" placeholder="Email (optional)"/>
+        <input type="text"  id="m-phone" placeholder="Phone (optional)"/>
+        <input type="text"  id="m-unit"  placeholder="Unit" id="m-unit"/>
+      </div>
+      <button class="btn small" id="addMemberBtn">Add Member</button>
+      <p class="error" id="m-error"></p>
+    </div>
+
+    <div class="card">
+      <h2>Members</h2>
+      <table>
+        <thead><tr><th>Name</th><th>Email</th><th>Phone</th><th>Unit</th><th></th></tr></thead>
+        <tbody id="members-table"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="members.js"></script>
+</body>
+</html>
